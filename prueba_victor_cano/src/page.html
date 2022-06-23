@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <script>
+      function deployMenu1 () {
+        document.getElementById('deployMenu1Id').classList.toggle('show')
+      }
+
+      function deployMenu2 () {
+        document.getElementById('deployMenu2Id').classList.toggle('show')
+      }
+      
+      // Se cierra el menu si se da clic en otro lado
+      window.onclick = function (event) {
+        if (!event.target.matches('.share-color')) {
+          let deploy = document.getElementsByClassName('deploy-menu-content')
+          let i
+          for (i = 0; i < deploy.length; i++) {
+            let openDeploy = deploy[i]
+            if (openDeploy.classList.contains('show')) {
+              openDeploy.classList.remove('show')
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body style="background-color:#f6f4f5;">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div class="d-flex">
+            <div class="card mt-4">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img
+                    class="img-fluid img-settings m-3"
+                    src="./recursos/img01.jpg"
+                  />
+                </div>
+                <div class="col-lg-7 m-3">
+                  <div class="row d-flex">
+                    <div
+                      class="col-12 col-lg-8 p-0 title-color ml-3 ml-lg-0 order-1 order-lg-1"
+                    >
+                      Free tour nocturno por Madrid
+                    </div>
+                    <div
+                      class="col-12 col-lg-4 p-0 dropdown order-3 order-lg-2"
+                    >
+                      <div class="d-flex">
+                        <div
+                          onclick="deployMenu1()"
+                          class="col-9 col-lg-11 p-0 share-color text-left text-lg-right ml-3 ml-lg-0"
+                        >
+                          Compartir
+                        </div>
+                        <div id="deployMenu1Id" class="deploy-menu-content">
+                          <a>Facebook</a>
+                          <a>Twitter</a>
+                          <a>LinkedIn</a>
+                        </div>
+                        <div
+                          class="col-3 free-color text-end order-4 d-lg-none"
+                        >
+                          ¡Gratis!
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex order-2 order-lg-3 ml-3 ml-lg-0 pb-4 pb-lg-0"
+                    >
+                      <div class="rate-color mr-2">9,5 / 10</div>
+                      <div class="data-color">
+                        1.316 opiniones | 12.681 viajeros
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row d-none d-lg-block">
+                    En este free tour octurno por Madrid contemplaremos la
+                    iluminación de las principales plazas y monumentos de la
+                    capital española. ¡Una ruta inolvidable por el centro de la
+                    ciudad!
+                  </div>
+                  <div class="free-color text-right order-4 d-none d-lg-block">
+                    ¡Gratis!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="d-flex">
+            <div class="card mt-4">
+              <div class="row">
+                <div class="col-lg-4">
+                  <img
+                    class="img-fluid img-settings m-3"
+                    src="./recursos/img02.jpg"
+                  />
+                </div>
+                <div class="col-lg-7 m-3">
+                  <div class="row d-flex">
+                    <div
+                      class="col-12 col-lg-8 p-0 title-color ml-3 ml-lg-0 order-1 order-lg-1"
+                    >
+                      Excursión a Toledo y Segovia
+                    </div>
+                    <div
+                      class="col-12 col-lg-4 p-0 dropdown col order-3 order-lg-2"
+                    >
+                      <div class="d-flex">
+                        <div
+                          onclick="deployMenu2()"
+                          class="col-9 col-lg-11 p-0 share-color text-left text-lg-right ml-3 ml-lg-0"
+                        >
+                          Compartir
+                        </div>
+                        <div id="deployMenu2Id" class="deploy-menu-content">
+                          <a>Facebook</a>
+                          <a>Twitter</a>
+                          <a>LinkedIn</a>
+                        </div>
+                        <div
+                          class="col-3 free-color text-end order-4 d-lg-none"
+                        >
+                          <div class="d-flex justify-content-end mr-4 mr-lg-0">
+                            <div
+                              class="discount-color d-flex align-items-center"
+                            >
+                              (-30%)
+                            </div>
+                            <div class="ml-2 free-color">55€</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex order-2 order-lg-3 ml-3 ml-lg-0 pb-4 pb-lg-0"
+                    >
+                      <div class="rate-color mr-2">9,2 / 10</div>
+                      <div class="data-color">
+                        2.215 opiniones | 20.611 viajeros
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row d-none d-lg-block">
+                    En este tour visitaremos en un día las dos ciudades más
+                    populares desde Madrid: Toledo y Segovia. Si lo deseáis,
+                    podréis ampliar el recorrido hasta Ávila, famosa por sus
+                    murallas.
+                  </div>
+                  <div class="free-color text-right order-4 d-none d-lg-block">
+                    <div class="d-flex justify-content-end">
+                      <div class="discount-color d-flex align-items-center">
+                        (-30%)
+                      </div>
+                      <div class="ml-2 free-color">55€</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
